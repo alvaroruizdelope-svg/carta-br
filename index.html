@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Descubre Carta-B/R, una demostración de carta digital para bares y restaurantes de AV CODE STUDIO.">
+  <meta name="theme-color" content="#F8F5EF">
+  <title>CARTA-B/R · Carta digital</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="css/estilos.css">
+  <script src="js/carta.js" defer></script>
+  <script src="js/script.js" defer></script>
+</head>
+<body id="arriba">
+  <a class="salto" href="#carta">Saltar a la carta</a>
+  <header class="cabecera">
+    <div class="contenedor cabecera-interior">
+      <a class="marca" href="#arriba" aria-label="CARTA-B/R, inicio">
+        <span class="marca-icono" aria-hidden="true">B<span>/</span>R</span>
+        <span data-nombre>CARTA-B/R</span>
+      </a>
+      <nav class="cabecera-enlaces" aria-label="Navegación principal">
+        <a href="#carta" data-menu>La carta</a>
+        <a href="#refrescos-y-aguas" data-menu="bebidas">Las bebidas</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="portada contenedor" aria-labelledby="titulo-portada">
+      <div class="portada-texto">
+        <p class="rotulo" data-nombre>CARTA-B/R</p>
+        <h1 id="titulo-portada" data-lema>Tu carta, siempre a mano</h1>
+        <p class="introduccion" data-descripcion>Descubre nuestra selección de platos, tapas, bebidas y especialidades. Todo organizado para que encuentres fácilmente lo que más te apetece.</p>
+        <div class="portada-acciones">
+          <a class="boton boton-claro" href="#carta" data-menu>Ver carta <span aria-hidden="true">↓</span></a>
+          <a class="boton boton-borde" href="#refrescos-y-aguas" data-menu="bebidas">Ver bebidas <span aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="portada-arte" aria-hidden="true">
+        <div class="plato"><span></span></div>
+        <div class="tenedor"></div>
+        <div class="cuchillo"></div>
+      </div>
+    </section>
+
+    <section class="contenedor carta" aria-labelledby="carta">
+      <div class="carta-cabecera">
+        <div>
+          <p class="aviso" id="aviso-demo">Carta digital de demostración. Productos y precios ficticios.</p>
+          <h2 id="carta" tabindex="-1">La carta</h2>
+        </div>
+        <form class="busqueda" role="search" hidden>
+          <label class="solo-lector" for="buscar">Buscar productos por nombre</label>
+          <span class="lupa" aria-hidden="true"></span>
+          <input id="buscar" type="search" placeholder="Buscar en la carta…" autocomplete="off">
+          <button class="limpiar" type="reset" aria-label="Borrar búsqueda" hidden>×</button>
+        </form>
+      </div>
+      <div class="carta-interior">
+        <nav class="categorias" aria-label="Categorías de la carta" hidden>
+          <label class="categoria-movil" for="elegir-categoria">Ir a una categoría</label>
+          <select class="categoria-movil" id="elegir-categoria"></select>
+          <div class="categoria-enlaces" id="categorias"></div>
+        </nav>
+        <div class="carta-productos">
+          <p class="resultado" id="resultado" role="status" aria-atomic="true"></p>
+          <div id="productos"></div>
+          <div class="sin-resultados" id="sin-resultados" hidden>
+            <p>No encontramos productos con ese nombre.</p>
+            <button class="boton boton-oliva" type="button" id="ver-todos">Ver todos los productos</button>
+          </div>
+          <noscript><p>Activa JavaScript para consultar los productos de la carta.</p></noscript>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor pie-interior">
+      <div>
+        <p class="pie-marca" data-nombre>CARTA-B/R</p>
+        <p id="texto-pie">Demostración de carta digital para bares y restaurantes</p>
+        <div id="contacto" hidden></div>
+        <p class="credito">Diseñado y desarrollado por <a href="https://alvaro-web.pages.dev/" target="_blank" rel="noopener noreferrer">AV CODE STUDIO</a></p>
+      </div>
+      <a class="boton volver" href="#arriba">Volver arriba <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+</body>
+</html>
